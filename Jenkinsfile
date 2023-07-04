@@ -22,7 +22,7 @@ node {
       def resourceGroup = 'pragnya'
       def webAppName = 'pragnya'
       // login Azure
-      withCredentials([azureServicePrincipal {('azureid')]) {
+      withCredentials([azureServicePrincipal {('azureid')}]) {
     sh 'az login --service-principal -u $AZURE_CLIENT_ID -p $AZURE_CLIENT_SECRET -t $AZURE_TENANT_ID'
       }
       // get publish settings
